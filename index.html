@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Mitrr 🌼</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    font-family:Poppins,sans-serif;
+    background:
+        radial-gradient(circle at 15% 15%,#ffddeb,transparent 30%),
+        radial-gradient(circle at 85% 20%,#fff0bd,transparent 28%),
+        linear-gradient(145deg,#fff7fb,#fffdf4,#f8f0ff);
+    color:#604d59;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+.glow{
+    position:fixed;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.3;
+    pointer-events:none;
+}
+
+.glow.one{
+    background:#ffb3d0;
+    top:-100px;
+    left:-100px;
+}
+
+.glow.two{
+    background:#ffe59a;
+    right:-100px;
+    bottom:-100px;
+}
+
+/* ---------- FLOWERS ---------- */
+
+.corner-flower{
+    position:fixed;
+    z-index:2;
+    font-size:34px;
+    pointer-events:none;
+    animation:sway 4s ease-in-out infinite;
+}
+
+.cf1{left:5%;top:12%}
+.cf2{right:6%;top:17%;animation-delay:1s}
+.cf3{left:7%;bottom:12%;animation-delay:2s}
+.cf4{right:7%;bottom:14%;animation-delay:1.4s}
+
+@keyframes sway{
+
+    50%{
+        transform:rotate(12deg) translateY(-7px);
+    }
+
+}
+
+/* ---------- FALLING PETALS ---------- */
+
+.petal{
+    position:fixed;
+    top:-40px;
+    z-index:50;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    to{
+        transform:
+            translateY(110vh)
+            rotate(500deg);
+        opacity:0;
+    }
+
+}
+
+/* ---------- OPENING ---------- */
+
+#opening{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    background:
+        radial-gradient(circle,#fff7fb,#ffe9f2 60%,#fff8e7);
+
+    transition:1s ease;
+}
+
+.open-content{
+    max-width:520px;
+    animation:appear 1.4s ease;
+}
+
+.open-small{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#b68198;
+}
+
+.open-title{
+    font-family:"Dancing Script",cursive;
+    font-size:72px;
+    color:#d85c8b;
+    margin:10px 0;
+}
+
+.open-text{
+    font-size:15px;
+    line-height:1.9;
+    color:#806b76;
+    margin-bottom:30px;
+}
+
+.open-btn{
+    border:0;
+    padding:15px 30px;
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ee82aa,
+        #d95788
+    );
+
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 30px rgba(210,85,130,.3);
+
+    transition:.3s;
+}
+
+.open-btn:hover{
+    transform:translateY(-3px) scale(1.04);
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+/* ---------- MAIN ---------- */
+
+#main{
+    display:none;
+    padding:45px 18px 80px;
+}
+
+.container{
+    width:min(720px,100%);
+    margin:auto;
+}
+
+/* ---------- HEADER ---------- */
+
+.header{
+    text-align:center;
+    padding:20px 10px;
+}
+
+.header-small{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#b27f94;
+}
+
+.header-title{
+    font-family:"Dancing Script",cursive;
+    font-size:68px;
+    color:#d45d8b;
+    margin:5px 0;
+}
+
+.header-sub{
+    font-size:14px;
+    color:#806d78;
+}
+
+/* ---------- CUTE CATS ---------- */
+
+.cats{
+    position:relative;
+    height:280px;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    gap:10px;
+
+    margin-top:5px;
+}
+
+.cat{
+    position:relative;
+    width:175px;
+    height:205px;
+
+    animation:catFloat 3s ease-in-out infinite;
+}
+
+.cat:nth-child(2){
+    animation-delay:.5s;
+}
+
+@keyframes catFloat{
+
+    50%{
+        transform:translateY(-9px);
+    }
+
+}
+
+/* body */
+
+.cat-body{
+    position:absolute;
+
+    width:125px;
+    height:120px;
+
+    left:25px;
+    bottom:0;
+
+    border-radius:
+        55% 55%
+        43% 43%;
+
+    background:#e9ad7d;
+
+    box-shadow:
+        0 10px 20px rgba(100,70,70,.12);
+}
+
+/* white cat */
+
+.white .cat-body{
+    background:#fff;
+}
+
+/* head */
+
+.cat-head{
+    position:absolute;
+
+    width:120px;
+    height:105px;
+
+    left:27px;
+    top:38px;
+
+    border-radius:50%;
+
+    background:#e9ad7d;
+
+    z-index:3;
+}
+
+.white .cat-head{
+    background:#fff;
+}
+
+/* ears */
+
+.ear{
+    position:absolute;
+
+    width:52px;
+    height:58px;
+
+    top:25px;
+
+    background:#e9ad7d;
+
+    transform:rotate(45deg);
+
+    z-index:1;
+}
+
+.white .ear{
+    background:#fff;
+}
+
+.ear.left{
+    left:25px;
+}
+
+.ear.right{
+    right:25px;
+}
+
+.ear::after{
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    background:#ffc5d7;
+
+    clip-path:
+        polygon(
+            50% 0,
+            100% 100%,
+            0 100%
+        );
+}
+
+/* eyes */
+
+.eye{
+    position:absolute;
+
+    width:9px;
+    height:12px;
+
+    top:47px;
+
+    background:#44363d;
+
+    border-radius:50%;
+
+    z-index:5;
+}
+
+.eye.left{
+    left:31px;
+}
+
+.eye.right{
+    right:31px;
+}
+
+/* cheeks */
+
+.cheek{
+    position:absolute;
+
+    width:20px;
+    height:10px;
+
+    top:62px;
+
+    background:#ff9fbd;
+
+    opacity:.55;
+
+    border-radius:50%;
+
+    z-index:5;
+}
+
+.cheek.left{
+    left:8px;
+}
+
+.cheek.right{
+    right:8px;
+}
+
+/* mouth */
+
+.mouth{
+    position:absolute;
+
+    left:50%;
+    top:59px;
+
+    transform:translateX(-50%);
+
+    font-size:14px;
+
+    z-index:6;
+}
+
+/* whiskers */
+
+.whisker{
+    position:absolute;
+
+    width:35px;
+    height:1px;
+
+    background:#a1848d;
+
+    top:67px;
+
+    z-index:5;
+}
+
+.wleft{
+    left:-5px;
+    transform:rotate(8deg);
+}
+
+.wright{
+    right:-5px;
+    transform:rotate(-8deg);
+}
+
+/* heart */
+
+.cat-heart{
+    position:absolute;
+
+    top:68px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:31px;
+
+    z-index:20;
+
+    animation:heartBeat 1.4s infinite;
+}
+
+@keyframes heartBeat{
+
+    50%{
+        transform:
+            translateX(-50%)
+            scale(1.3);
+    }
+
+}
+
+/* ---------- NOTE ---------- */
+
+.note{
+    margin-top:15px;
+
+    padding:32px 25px;
+
+    border-radius:32px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    border:
+        1px solid
+        rgba(235,170,195,.5);
+
+    box-shadow:
+        0 20px 60px
+        rgba(160,100,130,.14);
+
+    backdrop-filter:blur(12px);
+}
+
+.note-title{
+    text-align:center;
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:38px;
+
+    color:#ce5c89;
+
+    margin-bottom:25px;
+}
+
+/* typing area */
+
+.typing-area{
+    min-height:330px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:25px;
+
+    line-height:1.8;
+
+    color:#664d59;
+}
+
+.line{
+    opacity:0;
+    min-height:45px;
+}
+
+.line.show{
+    opacity:1;
+}
+
+.cursor{
+    display:inline-block;
+
+    width:2px;
+    height:25px;
+
+    background:#d45c88;
+
+    margin-left:3px;
+
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+/* ---------- END ---------- */
+
+.final{
+    text-align:center;
+
+    padding:
+        50px 10px 10px;
+}
+
+.final-flower{
+    font-size:42px;
+
+    animation:catFloat 2s infinite;
+}
+
+.final-title{
+    font-family:"Dancing Script",cursive;
+
+    font-size:43px;
+
+    color:#d35c89;
+
+    margin:10px 0;
+}
+
+.final-text{
+    font-size:14px;
+
+    line-height:1.9;
+
+    color:#806d78;
+}
+
+.signature{
+    margin-top:25px;
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:30px;
+
+    color:#cb668b;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:500px){
+
+    .open-title{
+        font-size:58px;
+    }
+
+    .header-title{
+        font-size:57px;
+    }
+
+    .cat{
+        transform:scale(.82);
+        margin:0 -18px;
+    }
+
+    .cats{
+        gap:0;
+    }
+
+    .note{
+        padding:26px 20px;
+    }
+
+    .typing-area{
+        font-size:23px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- BACKGROUND -->
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<div class="corner-flower cf1">🌼</div>
+<div class="corner-flower cf2">🌼</div>
+<div class="corner-flower cf3">🌼</div>
+<div class="corner-flower cf4">🌼</div>
+
+
+<!-- OPENING -->
+
+<section id="opening">
+
+    <div class="open-content">
+
+        <div class="open-small">
+            A LITTLE SOMETHING FOR YOU
+        </div>
+
+        <div class="open-title">
+            Mitrr 🌼
+        </div>
+
+        <div class="open-text">
+            Kuch log life mein bina kisi reason ke bhi
+            bahot special ban jaate hain... 🐱
+            <br>
+            Ye chhoti si cheez bas tumhare liye.
+        </div>
+
+        <button
+            class="open-btn"
+            onclick="openPage()"
+        >
+            Open it 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main id="main">
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <section class="header">
+
+        <div class="header-small">
+            JUST FOR YOU
+        </div>
+
+        <div class="header-title">
+            Hey Mitrr 🌼
+        </div>
+
+        <div class="header-sub">
+            Ek chhota sa note... bas tumhare liye.
+        </div>
+
+    </section>
+
+
+    <!-- CATS -->
+
+    <section class="cats">
+
+
+        <!-- CAT 1 -->
+
+        <div class="cat">
+
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+
+            <div class="cat-head">
+
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+
+                <div class="cheek left"></div>
+                <div class="cheek right"></div>
+
+                <div class="mouth">
+                    ♡
+                </div>
+
+                <div class="whisker wleft"></div>
+                <div class="whisker wright"></div>
+
+            </div>
+
+            <div class="cat-body"></div>
+
+        </div>
+
+
+        <div class="cat-heart">
+            💗
+        </div>
+
+
+        <!-- CAT 2 -->
+
+        <div class="cat white">
+
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+
+            <div class="cat-head">
+
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+
+                <div class="cheek left"></div>
+                <div class="cheek right"></div>
+
+                <div class="mouth">
+                    ♥
+                </div>
+
+                <div class="whisker wleft"></div>
+                <div class="whisker wright"></div>
+
+            </div>
+
+            <div class="cat-body"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOTE -->
+
+    <section class="note">
+
+        <div class="note-title">
+            A little note for you 🌼
+        </div>
+
+        <div
+            id="typingArea"
+            class="typing-area"
+        ></div>
+
+    </section>
+
+
+    <!-- END -->
+
+    <section class="final">
+
+        <div class="final-flower">
+            🌼🐱🌼
+        </div>
+
+        <div class="final-title">
+            Keep smiling, Mitrr ❤️
+        </div>
+
+        <div class="final-text">
+
+            Bas itna yaad rakhna...
+            <br>
+
+            Tum genuinely special ho.
+            <br>
+
+            Aur tumhari smile kaafi important hai. 🌸
+
+        </div>
+
+        <div class="signature">
+            — Ek dost ki taraf se 🐱🌼
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+<script>
+
+/* ---------- OPEN PAGE ---------- */
+
+function openPage(){
+
+    const opening =
+        document.getElementById("opening");
+
+    const main =
+        document.getElementById("main");
+
+    opening.style.opacity="0";
+
+    setTimeout(()=>{
+
+        opening.style.display="none";
+
+        main.style.display="block";
+
+        window.scrollTo(0,0);
+
+        startTyping();
+
+    },900);
+
+}
+
+
+/* ---------- TYPING MESSAGE ---------- */
+
+/*
+   Yahan se tu baad mein
+   apna message easily change
+   kar sakta hai.
+*/
+
+const lines = [
+
+    "Mitrr... 🌼",
+
+    "Bas ek chhoti si baat kehni thi.",
+
+    "Tum un logon mein se ho jinki presence",
+    "bina kuch kiye bhi din thoda better bana deti hai. 🫶",
+
+    "Life hamesha perfect nahi hoti,",
+    "aur har din same bhi nahi hota.",
+
+    "Kabhi mood acha hota hai,",
+    "kabhi bilkul nahi.",
+
+    "Bas un sab ke beech...",
+    "I hope tum hamesha yaad rakho",
+
+    "ki tum genuinely special ho. ❤️",
+
+    "Hamesha haste rehna,",
+    "apni cute si smile ko kabhi lose mat karna. 🌸",
+
+    "Aur jab life thodi difficult lage na,",
+    "to thoda break lena,",
+    "deep breath lena,",
+    "aur khud par thoda sa pyaar rakhna. 🫶",
+
+    "Aur haan...",
+    "agar kabhi tumhara day boring ho,",
+
+    "to samajh lena...",
+    "kahin na kahin ek cute si billi",
+    "tumhe smile karwane ke liye ready baithi hai. 🐱😂",
+
+    "Bas itna hi...",
+
+    "Stay happy, stay the same,",
+    "and keep being the wonderful person you are. 🌼❤️"
+
+];
+
+
+async function startTyping(){
+
+    const area =
+        document.getElementById("typingArea");
+
+    for(let i=0;i<lines.length;i++){
+
+        const line =
+            document.createElement("div");
+
+        line.className="line";
+
+        area.appendChild(line);
+
+        line.classList.add("show");
+
+        await typeText(line,lines[i]);
+
+        await wait(450);
+
+    }
+
+}
+
+
+function typeText(element,text){
+
+    return new Promise(resolve=>{
+
+        let i=0;
+
+        const cursor =
+            document.createElement("span");
+
+        cursor.className="cursor";
+
+        element.appendChild(cursor);
+
+        const interval =
+            setInterval(()=>{
+
+                if(i<text.length){
+
+                    cursor.before(
+                        document.createTextNode(text[i])
+                    );
+
+                    i++;
+
+                }else{
+
+                    clearInterval(interval);
+
+                    setTimeout(()=>{
+                        cursor.remove();
+                        resolve();
+                    },350);
+
+                }
+
+            },45);
+
+    });
+
+}
+
+
+function wait(ms){
+
+    return new Promise(
+        resolve=>setTimeout(resolve,ms)
+    );
+
+}
+
+
+/* ---------- FALLING FLOWERS ---------- */
+
+const symbols=[
+    "🌼",
+    "🌸",
+    "💗",
+    "♡",
+    "✨"
+];
+
+function createPetal(){
+
+    const petal =
+        document.createElement("div");
+
+    petal.className="petal";
+
+    petal.innerHTML =
+        symbols[
+            Math.floor(
+                Math.random()*symbols.length
+            )
+        ];
+
+    petal.style.left =
+        Math.random()*100+"vw";
+
+    petal.style.fontSize =
+        (12+Math.random()*16)+"px";
+
+    petal.style.animationDuration =
+        (5+Math.random()*5)+"s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(()=>{
+        petal.remove();
+    },10000);
+
+}
+
+setInterval(createPetal,700);
+
+</script>
+
+</body>
+  </html>
